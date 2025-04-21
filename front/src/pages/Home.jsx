@@ -17,7 +17,7 @@ const Home = () => {
 
   const fetchJobs = () => {
     axios
-      .get("http://localhost:5000/api/jobs")
+      .get("https://job-portal-8cii.onrender.com/api/jobs")
       .then((response) => {
         console.log("Fetched jobs:", response.data); // Debug
         const jobsWithFallback = response.data.map((job) => ({

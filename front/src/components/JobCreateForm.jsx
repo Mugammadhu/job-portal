@@ -51,7 +51,7 @@ const JobCreateForm = ({ onClose }) => {
         data.append(key, value);
       });
 
-      const response = await axios.post(`http://localhost:5000/api/jobs`, data, {
+      const response = await axios.post(`https://job-portal-8cii.onrender.com/api/jobs`, data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

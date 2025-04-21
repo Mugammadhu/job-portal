@@ -15,7 +15,19 @@ router.get('/jobs', async (req, res) => {
 });
 
 router.post('/jobs', upload.single('image'), async (req, res) => {
-  const { title, company, location, minSalary, maxSalary, experienceMin, experienceMax, jobType, workMode, deadline, description } = req.body;
+  const {
+    title,
+    company,
+    location,
+    minSalary,
+    maxSalary,
+    experienceMin,
+    experienceMax,
+    jobType,
+    workMode,
+    deadline,
+    description,
+  } = req.body;
   let image = null;
   if (req.file) {
     image = req.file.buffer; // Convert uploaded file to binary buffer
@@ -34,6 +46,7 @@ router.post('/jobs', upload.single('image'), async (req, res) => {
     deadline: new Date(deadline),
     description,
     image,
+    createdAt: new Date(), // Add createdAt timestamp
   });
 
   try {

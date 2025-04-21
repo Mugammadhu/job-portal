@@ -9,6 +9,10 @@
   max-height: 90vh;
   overflow-y: auto;
 }
+.form_title{
+  display: flex;
+  justify-content: center;
+}
 
 .form-close {
   position: absolute;

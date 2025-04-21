@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 import React, { useState } from "react";
 import "../styles/JobCard.css";
 
@@ -33,7 +34,7 @@ const JobCard = ({
       <div className="job-card-header">
         <img src={imageSrc} alt="logo" className="job-logo" />
         <div className="job-meta">
-          <span className="time">{createdAt}</span>
+          <span className="time">2h ago</span>
           <span className="job-type">{jobType}</span>
         </div>
       </div>

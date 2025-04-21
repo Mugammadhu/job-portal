@@ -1,0 +1,141 @@
+.talent-section {
+    padding: 4rem 2rem;
+    background: #f4f8fb;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .section-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+    color: #333;
+  }
+  
+  .talent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .talent-card {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1.8rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: cardEnter 0.6s ease forwards;
+  }
+  
+  @keyframes cardEnter {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .talent-card:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .talent-card:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .talent-card:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .talent-card:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+  /* Add more delays if you have more cards */
+  
+  .talent-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+  }
+  
+  .talent-avatar {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    animation: fadeInAvatar 1s ease-in;
+  }
+  
+  @keyframes fadeInAvatar {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .talent-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0.25rem 0;
+  }
+  
+  .talent-role {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+  }
+  
+  .talent-location {
+    font-size: 0.95rem;
+    color: #999;
+    margin-bottom: 1rem;
+  }
+  
+  .talent-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    animation: fadeInSkills 1s ease-in-out;
+  }
+  
+  @keyframes fadeInSkills {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .skill-badge {
+    background-color: #e0f0ff;
+    color: #0073e6;
+    padding: 0.4rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .skill-badge:hover {
+    background-color: #d0e7ff;
+  }
+  

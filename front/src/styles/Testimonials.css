@@ -1,0 +1,83 @@
+.testimonial-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(145deg, #f9f9f9, #e3e3e3);
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+    margin-top: 30px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonial-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 0.25rem;
+  }
+  
+  .title {
+    font-size: 0.95rem;
+    color: #777;
+    margin-bottom: 1rem;
+  }
+  
+  .quote {
+    font-style: italic;
+    color: #444;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

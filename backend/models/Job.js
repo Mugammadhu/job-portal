@@ -13,6 +13,7 @@ const jobSchema = new mongoose.Schema({
   deadline: { type: Date, required: true },
   description: { type: String, required: true },
   image: { type: Buffer }, // Store image as binary data
+  createdAt: { type: Date, default: Date.now },
 });
 
 module.exports = mongoose.model('Job', jobSchema);

@@ -1,0 +1,44 @@
+.filter-bar {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 122px;
+  padding: 0 20px;
+  height: 80px;
+
+  display: flex;
+  align-items: center;       /* Vertically center everything */
+  gap: 20px;                 /* Add space between elements */
+  flex-wrap: wrap;           /* Responsive wrapping */
+  justify-content: space-between;
+}
+
+.filter-bar .form-control,
+.filter-bar .form-select {
+  border: none;
+  box-shadow: none;
+  height: 40px;
+  font-size: 14px;
+  width: auto;
+  min-width: 180px;
+}
+
+.filter-bar .form-control:focus,
+.filter-bar .form-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    border-radius: 20px;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .filter-bar .form-control,
+  .filter-bar .form-select {
+    width: 100%;
+  }
+}
